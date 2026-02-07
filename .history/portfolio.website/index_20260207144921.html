@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav>
+    <h2 class="logo">My Portfolio</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="images/profile.jpg" class="profile-img" alt="Profile">
+  <h1>Hi, I'm [Your Name]</h1>
+  <p>Learning web development and building projects step by step.</p>
+  <button onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>I am a computer science student learning web development and building projects to improve my skills step by step.</p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skills-list">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+    <div>Git</div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="images/project1.png" alt="Portfolio Website">
+      <h3>Portfolio Website</h3>
+      <p>This project: my personal portfolio built using HTML, CSS, and JS.</p>
+      <div class="project-links">
+        <a href="#" target="_blank">Live Demo</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:yourgmail@gmail.com">yourgmail@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/yourname">Profile</a></p>
+  <p>GitHub: <a href="https://github.com/yourusername">Repository</a></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

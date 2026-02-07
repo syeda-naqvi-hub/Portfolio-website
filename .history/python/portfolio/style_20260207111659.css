@@ -1,0 +1,31 @@
+body {
+    font-family: arial,sans-serif;
+    margin: 0;
+}
+header {
+    background: #ccb4b4;
+    color: white;
+    padding: 15px 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+a {
+    color: white;
+    text-decoration:none
+}
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #cec6c6;
+    text-align: center;
+}
