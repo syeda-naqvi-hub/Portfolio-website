@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users - Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-white shadow-xl z-40">
+    <div class="p-6">
+      <h1 class="text-2xl font-bold text-gray-900">SmartStore Admin</h1>
+    </div>
+    <nav class="mt-8">
+      <a href="dashboard.html" class="flex items-center px-6 py-4 hover:bg-gray-100">
+        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+        </svg>
+        Dashboard
+      </a>
+      <a href="products.html" class="flex items-center px-6 py-4 hover:bg-gray-100">
+        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l.707.707A1 1 0 007.707 18H15a1 1 0 001-1v-2a1 1 0 00-1-1H7.414l-.293-.293A1 1 0 007 14H5a1 1 0 01-1-1V5a1 1 0 000-2H3z"></path>
+        </svg>
+        Products
+      </a>
+      <a href="orders.html" class="flex items-center px-6 py-4 hover:bg-gray-100">
+        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
+          <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path>
+        </svg>
+        Orders
+      </a>
+      <a href="users.html" class="flex items-center px-6 py-4 text-gray-900 bg-blue-50 border-r-4 border-blue-500">
+        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+        </svg>
+        Users
+      </a>
+    </nav>
+  </aside>
+
+  <main class="ml-64 p-8">
+    <div class="flex items-center justify-between mb-12">
+      <div>
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+          Users Management
+        </h1>
+        <p class="text-xl text-gray-600 mt-2">Manage customer accounts and permissions</p>
+      </div>
+    </div>
+
+    <!-- Users Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center">
+        <div class="text-4xl font-bold text-gray-900 mb-2">12,847</div>
+        <div class="text-gray-600 text-lg">Total Users</div>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center">
+        <div class="text-4xl font-bold text-emerald-600 mb-2">892</div>
+        <div class="text-gray-600 text-lg">Active This Month</div>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center">
+        <div class="text-4xl font-bold text-blue-600 mb-2">3</div>
+        <div class="text-gray-600 text-lg">Admin Users</div>
+      </div>
+    </div>
+
+    <!-- Users Table -->
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+      <div class="p-8 border-b border-gray-200">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold text-gray-900">All Users</h2>
+          <div class="flex gap-3">
+            <select class="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500">
+              <option>All Roles</option>
+              <option>Admin</option>
+              <option>Customer</option>
+            </select>
+            <button class="px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 font-semibold">
+              + Add User
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">User</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Email</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Role</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Orders</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Joined</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Status</th>
+              <th class="px-8 py-6 text-left text-sm font-semibold text-gray-900 uppercase">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-8 py-6">
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-2xl flex items-center justify-center font-semibold text-sm mr-4">
+                    JD
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-900">John Doe</p>
+                    <p class="text-sm text-gray-500">john.doe@email.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-8 py-6">john.doe@email.com</td>
+              <td class="px-8 py-6">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  Customer
+                </span>
+              </td>
+              <td class="px-8 py-6 font-semibold text-gray-900">12</td>
+              <td class="px-8 py-6 text-sm text-gray-500">Jan 2024</td>
+              <td class="px-8 py-6">
+                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
+                  Active
+                </span>
+              </td>
+              <td class="px-8 py-6">
+                <button class="text-blue-600 hover:text-blue-500 text-sm mr-3">Edit</button>
+                <button class="text-orange-600 hover:text-orange-500 text-sm mr-3">Orders</button>
+                <button class="text-red-600 hover:text-red-500 text-sm">Suspend</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

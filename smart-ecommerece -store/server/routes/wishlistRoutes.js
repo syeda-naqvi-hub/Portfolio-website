@@ -1,0 +1,20 @@
+import express from 'express'
+import { 
+  addToWishlist,
+  removeFromWishlist,
+  getWishlist 
+} from '../controllers/wishlistController.js'
+import { protect } from '../middleware/authMiddleware.js'
+
+const router = express.Router()
+
+router.use(protect)
+
+router.route('/')
+  .get(getWishlist)
+  .post(addToWishlist)
+
+router.delete('/:productId', removeFromWishlist)
+
+export default router
+
